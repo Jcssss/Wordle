@@ -24,7 +24,7 @@ const KeyButton = ({text, isLetter, onClick, value}) => {
         <button 
             className={`keyboard-item ${isLetter? "letter" : ""} ${possibleVals[value]}`} 
             onClick = {() => action()}
-            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+            onKeyPress={(e) => { (e.key === 'Enter' || e.key === 'Space') && e.preventDefault(); }}
         >
             {text}
         </button>
