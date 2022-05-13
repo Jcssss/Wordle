@@ -115,6 +115,7 @@ const App = () => {
         } else if (value === "Backspace") {
             removeLetter();
         } else if (value === "Enter") {
+            console.log("chosen word: " + chosenWord);
             checkWord();
         }
     };
