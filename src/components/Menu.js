@@ -8,7 +8,11 @@ function Menu({reset}) {
                 <button 
                     onClick={reset} 
                     className="new-game"
-                    onKeyPress={(e) => { (e.key === 'Enter' || e.keyCode === 32) && e.preventDefault(); }}
+                    onKeyPress={(e) => { 
+                        if (e.key === 'Enter' || e.key === 'Space' || e.key === ' ') {
+                            e.preventDefault();
+                        }
+                    }}
                 >
                     New Game
                 </button>
