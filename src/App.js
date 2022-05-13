@@ -6,6 +6,9 @@ import raw from './dict.txt';
 
 const App = () => {
 
+    // different exclamations obtained by winning
+    const compliments = ["Yipee", "Congrats", "Well Done" , "You're the best", "Way to go", "Winner", "You're a genius", "Damn", "Keep up the good work!", "You're a star"];
+
     // the letters of the alphabet
     const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     
@@ -87,7 +90,8 @@ const App = () => {
         if (gameState === 0) {
             setMessage("Game Over! The word was '" + chosenWord + "'.");
         } else if (gameState === 2) {
-            setMessage("Congratulations! The word was '" + chosenWord + "'.");
+            var comp = compliments[Math.floor(Math.random() * compliments.length)];
+            setMessage(comp + "! The word was '" + chosenWord + "'.");
         } else {
             setMessage("");
         }
@@ -285,7 +289,10 @@ const App = () => {
         <div>
             <Menu reset={resetGrid}/>
             <WordGrid words={words} values={values}/>
-            {message !== "" ? <div className="message">{message}</div> : <></>}
+            {message !== "" ? <div>
+                <div className="message">{message}</div> 
+                <a  className="def" href={"https://www.dictionary.com/browse/" + chosenWord.toLowerCase()}>Click here for definition.</a>
+            </div> : <></>}
             <Keyboard onClick={{
                 insert: insertLetter,
                 remove: removeLetter,
