@@ -13,7 +13,7 @@ const KeyButton = ({text, isLetter, onClick, value}) => {
     const action = () => {
         if (isLetter) {
             onClick.insert(text);
-        } else if (text === "Backspace") {
+        } else if (text === "Back") {
             onClick.remove();
         } else if (text === "Enter") {
             onClick.submit();
