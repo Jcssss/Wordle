@@ -23,12 +23,7 @@ const KeyButton = ({text, isLetter, onClick, value}) => {
     return (
         <button 
             className={`keyboard-item ${isLetter? "letter" : ""} ${possibleVals[value]}`} 
-            onClick = {() => action()}
-            onKeyPress={(e) => { 
-                if (e.key === 'Enter' || e.key === 'Space' || e.key === ' ') {
-                    e.preventDefault();
-                }
-            }}
+            onMouseDown = {() => action()}
         >
             {text}
         </button>

@@ -6,13 +6,8 @@ function Menu({reset}) {
             <div className="title">Wordle Unlimited</div>
             <div className="button-container">
                 <button 
-                    onClick={reset} 
+                    onMouseDown={reset} 
                     className="new-game"
-                    onKeyPress={(e) => { 
-                        if (e.key === 'Enter' || e.key === 'Space' || e.key === ' ') {
-                            e.preventDefault();
-                        }
-                    }}
                 >
                     New Game
                 </button>
