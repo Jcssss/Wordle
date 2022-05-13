@@ -102,7 +102,7 @@ const App = () => {
             .then(raw => raw.text())
             .then(text => text.toUpperCase())
             .then(text => {
-                var arr = text.split("\n")
+                var arr = text.split("\n");
                 setDict(arr);
                 console.log(arr);
             });
