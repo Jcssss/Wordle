@@ -2,7 +2,7 @@ import ButtonRow from "./ButtonRow";
 
 const ButtonTextOne = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
 const ButtonTextTwo = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
-const ButtonTextThree = ["Enter", "Z", "X", "C", "V", "B", "N", "M", "Backspace"]
+const ButtonTextThree = ["Enter", "Z", "X", "C", "V", "B", "N", "M", "Back"]
 
 const Keyboard = ({onClick, letters, values}) => {
 
