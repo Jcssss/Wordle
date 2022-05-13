@@ -100,11 +100,12 @@ const App = () => {
     const initDict = () => {
         fetch(raw)
             .then(raw => raw.text())
+            .then(text => text.toUpperCase())
             .then(text => {
-                text.toUpperCase();
-                console.log(text);
-            })
-            .then(text => setDict(text.split("\r\n")));
+                var arr = text.split("\n")
+                setDict(arr);
+                console.log(arr);
+            });
     };
 
     /* detectKey
