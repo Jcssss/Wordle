@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Wordle/client/static/css/main.cd196e8f.css",
-    "main.js": "/Wordle/client/static/js/main.f74cd866.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/Wordle/client/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/dict.txt": "/Wordle/client/static/media/dict.348157b367bbef40008b.txt",
-    "index.html": "/Wordle/client/index.html",
-    "main.cd196e8f.css.map": "/Wordle/client/static/css/main.cd196e8f.css.map",
-    "main.f74cd866.js.map": "/Wordle/client/static/js/main.f74cd866.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/Wordle/client/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/Wordle/static/css/main.cd196e8f.css",
+    "main.js": "/Wordle/static/js/main.30a813f8.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/Wordle/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/dict.txt": "/Wordle/static/media/dict.348157b367bbef40008b.txt",
+    "index.html": "/Wordle/index.html",
+    "main.cd196e8f.css.map": "/Wordle/static/css/main.cd196e8f.css.map",
+    "main.30a813f8.js.map": "/Wordle/static/js/main.30a813f8.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/Wordle/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd196e8f.css",
-    "static/js/main.f74cd866.js"
+    "static/js/main.30a813f8.js"
   ]
 }
