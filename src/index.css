@@ -1,13 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.menu {
+    margin-top: 30px;
+    width: 100%;
+    padding: none;
+}
+
+.title {
+    display: inline-block;
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-size: 50px;
+
+}
+
+.button-container {
+    display: inline-block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.new-game {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 400px;
+    grid-gap: 5px;
+}
+  
+.grid-item {
+    text-align: center;
+    border: 2px solid #CCC;
+    font-size: 40px;
+    height: 60px;
+}
+
+.partial-correct {
+    background-color: rgb(243, 243, 118);
+}
+
+.correct {
+    background-color: rgb(119, 245, 140);
+}
+
+.incorrect {
+    background-color: rgb(179, 179, 179);
+}
+
+.keyboard {
+    margin-top: 10px;
+}
+
+.keyboard-item {
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 20px;
+    border: 2px solid #CCC;
+}
+
+.keyboard-item:hover {
+    color: white;
+    background-color: black;
+}
+
+.keyboard-item.letter {
+    width: 35px;
+    text-align: center;
+}
+
+.message {
+    margin-top: 10px;
 }
