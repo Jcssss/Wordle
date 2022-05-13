@@ -100,7 +100,10 @@ const App = () => {
     const initDict = () => {
         fetch(raw)
             .then(raw => raw.text())
-            .then(text => text.toUpperCase())
+            .then(text => {
+                text.toUpperCase();
+                console.log(text);
+            })
             .then(text => setDict(text.split("\r\n")));
     };
 
@@ -115,7 +118,6 @@ const App = () => {
         } else if (value === "Backspace") {
             removeLetter();
         } else if (value === "Enter") {
-            console.log("chosen word: " + chosenWord);
             checkWord();
         }
     };
