@@ -5,38 +5,17 @@ import WordGrid from './components/WordGrid';
 import raw from './dict.txt';
 
 const App = () => {
-
-    // different exclamations obtained by winning
-    const compliments = ["Yipee", "Congrats", "Well Done" , "You're the best", "Way to go", "Winner", "You're a genius", "Damn", "Keep up the good work!", "You're a star"];
-
-    // the letters of the alphabet
-    const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     
-    // The Win/Loss Message
+    const compliments = ["Yipee", "Congrats", "Well Done" , "You're the best", "Way to go", "Winner", "You're a genius", "Damn", "Keep up the good work!", "You're a star"];
+    const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     const [message, setMessage] = useState("");
-
-    // The state of the game (0: Loss, 1: Playing, 2: Win)
     const [gameState, setGameState] = useState(1);
-
-    // For the keyboard, tracks whether each letter has been inputted by user
     const [letterVals, setLetterVals] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-
-    // Tracks the game number, used for useEffect purposes
     const [gameNum, setGameNum] = useState(1);
-
-    // The list of valid 5 letter words
     const [dict, setDict] = useState([]);
-
-    // The word to be guessed by the player
     const [chosenWord, setChosenWord] = useState("");
-
-    // The current guess number
     const [row, setRow] = useState(0);
-
-    // The current position of the next guessed letter
     const [column, setColumn] = useState(0);
-
-    // The letters guessed
     const [words, setWords] = useState([
         ["", "", "", "", ""],
         ["", "", "", "", ""],
@@ -45,8 +24,6 @@ const App = () => {
         ["", "", "", "", ""],
         ["", "", "", "", ""]
     ]);
-
-    // The values of the guessed letter (correct spot, wrong spot, not in word)
     const [values, setValues] = useState([
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
@@ -105,6 +82,7 @@ const App = () => {
         fetch(raw)
             .then(raw => raw.text())
             .then(text => text.toUpperCase())
+            .then(text => text.replace(/\r/gm, ''))
             .then(text => setDict(text.split("\n")));
     };
 
