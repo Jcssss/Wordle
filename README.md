@@ -1,5 +1,5 @@
 # Wordle Unlimited
-A replica of the New York Times' game Wordle. This project was programed using React JS and was the first time I used React JS in a project. While working on the project, I learned about props, state and other core aspects of the language.
+A replica of the New York Times' game Wordle. This project was programed using React JS and was the first time I my first introduction to the language. While working on the project, I learned about props, state and other core aspects of the language.
 
 The web-app is currently hosted using github-pages, to access it, simply click on this link: [Wordle Unlimited](https://Jcssss.github.io/Wordle)
 
